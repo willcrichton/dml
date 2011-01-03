@@ -1,8 +1,8 @@
 /*---------------------------------------------------------
-   Name: iframe
-   Desc: The HTML element. Opens webpages.
+   Name: img
+   Desc: A DImage. Displays a texture
    Attributes:
-		src: The URL of the webpage to open.
+		src: The path to the texture to display.
 		color: The color of the image.
    Example:
 		<img src="console/gmod_logo"></img>
