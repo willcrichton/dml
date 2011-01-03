@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"		"Derma Markup Language"
+	"version"	"1.0"
+	"up_date"	"1/2/2011"
+	"author_name"	"Entoros"
+	"author_email"	""
+	"author_url"	"
+	
+	"info"		"Easy way of creating Derma menus like HTML"
+}
