@@ -13,10 +13,12 @@
 local function createElement(class,parent,element)
 	local attr,content = element.attributes,element.content
 	local f = vgui.Create("DFrame",parent);
+	f:SetSize(attr.width or 100,attr.height or 100);
 	if attr.x and attr.y then f:SetPos(attr.x,attr.y)
 	else f:Center(); end
-	f:SetSize(attr.width or 100,attr.height or 100);
 	f:SetTitle(attr.title or "Untitled Frame");
+	if attr.color then f.lblTitle:SetColor( class:HexToColor( attr.color ) ); end
+	f.lblTitle:SetExpensiveShadow( 1, Color( 0, 0, 0, 20 ) )
 	f:SetDraggable( attr.draggable and tobool(attr.draggable) or true );
 	f:SetBackgroundBlur( attr.blur and tobool(attr.blur) or false );
 	f:ShowCloseButton( attr.showclose and tobool(attr.showclose) or true );
