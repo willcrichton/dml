@@ -1,7 +1,10 @@
 AddCSLuaFile("dml/meta.lua");
+AddCSLuaFile("dml/core.lua");
 local dir = "dml/elements/";
 
-for _,f in pairs(file.FindInLua( dir .. "*.lua")) do
-	AddCSLuaFile( dir .. f );
+for _,f in pairs(file.Find( dir.."*", "LUA")) do
+    AddCSLuaFile( dir .. f );
+    include( dir .. f ); 
 end
-IncludeClientFile("dml/core.lua");
+
+include("dml/core.lua");
